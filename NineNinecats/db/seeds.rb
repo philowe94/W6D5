@@ -8,7 +8,9 @@
 
 Cat.destroy_all
 
-cat1 = Cat.create(birth_date: '2011/01/01', color: 'brown',  name: 'toby', sex: 'F', description: 'Shes a fat cat')
-cat2 = Cat.create(birth_date: '2016/01/01', color: 'black',  name: 'blu')
-cat3 = Cat.create(birth_date: '2016/01/01', color: 'yellow', name: 'phil')
-cat4 = Cat.create(birth_date: '2016/01/01', color: 'purple', name: 'mac')
+cat1 = Cat.create(birth_date: '2011/01/01', color: 'Brown',  name: 'toby', sex: 'F', description: 'Shes a fat cat')
+cat2 = Cat.create(birth_date: '2016/01/01', color: 'Black',  name: 'blu')
+cat3 = Cat.create(birth_date: '2016/01/01', color: 'Yellow', name: 'phil')
+cat4 = Cat.create(birth_date: '2016/01/01', color: 'Purple', name: 'mac')
+
+p "made 4 cats"

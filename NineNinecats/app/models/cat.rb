@@ -16,7 +16,7 @@ require 'action_view'
 class Cat < ApplicationRecord
     include ActionView::Helpers::DateHelper
 
-    COLORS = ['Blue', 'Red', 'Purple', 'Yellow', 'Black', 'White', 'Green', 'Orange']
+    COLORS = ['Blue', 'Brown', 'Red', 'Purple', 'Yellow', 'Black', 'White', 'Green', 'Orange']
 
     validates :birth_date, presence: true
     validates :color, inclusion: COLORS
