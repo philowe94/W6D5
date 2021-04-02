@@ -1,0 +1,32 @@
+<form action="<%= cats_url %>" method="post">
+
+    <label>Name
+        <input type="text" name="cat[name]" id="name" value="<%= cat.name %>">
+    </label>
+    <label>Birth Date
+        <input type="date" name="cat[birth_date]" id="birth_date" value="<%= cat.birth_date %>">
+    </label>
+    <label>Color
+        <select name="cat[color]" id="color">
+            <% Cat.colors.each do |color| %>
+                <option value="<%= color %>">
+                    <%= color %>
+                </option>
+            <% end %>
+        </select>
+    </label>
+    <label>Sex
+        <input type="radio" name="cat[sex]" id="sex_m" value="M">  
+        <label for="sex_m">M</label>
+
+        <input type="radio" name="cat[sex]" id="sex_f" value="F">  
+        <label for="sex_f">F</label>
+
+    </label>
+    <label>Description
+        <textarea name="cat[description]" id="description" value="<%= cat.description %>">
+        </textarea>
+    </label>
+
+    <input type="submit" value="Submit New Cat"> 
+</form>

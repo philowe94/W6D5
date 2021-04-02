@@ -16,7 +16,14 @@ require 'action_view'
 class Cat < ApplicationRecord
     include ActionView::Helpers::DateHelper
 
+    COLORS = ['Blue', 'Red', 'Purple', 'Yellow', 'Black', 'White', 'Green', 'Orange']
+
     validates :birth_date, presence: true
+    validates :color, inclusion: COLORS
+
+    def self.colors
+        return COLORS
+    end
 
     def age
         distance_of_time_in_words_to_now(birth_date)
