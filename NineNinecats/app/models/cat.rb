@@ -17,12 +17,15 @@ class Cat < ApplicationRecord
     include ActionView::Helpers::DateHelper
 
     validates :birth_date, presence: true
-    validates :color, presence: true
-    validates :name, presence: true
-    validates :sex, presence: true
-    validates :description, presence: true
 
     def age
+        distance_of_time_in_words_to_now(birth_date)
 
+        # today = Date.today
+        # d = Date.new(today.year, dob.month, dob.day)
+        # age = d.year - dob.year - (d > today ? 1 : 0)
+
+        # now = Time.now.utc.to_date
+        # now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
     end
 end
